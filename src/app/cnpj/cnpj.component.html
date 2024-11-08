@@ -1,0 +1,180 @@
+<form #form="ngForm">
+  <div class="col-12 mb-4">
+    <p-button
+      icon="pi pi-arrow-left"
+      styleClass="p-button-rounded p-button-text p-button-raised"
+      routerLink="/"
+    ></p-button>
+  </div>
+
+  <div class="col-8 md:col-6 lg:col-3 mb-4">
+    <p-inputMask
+      type="tel"
+      mask="99.999.999/9999-99"
+      [(ngModel)]="buscacnpj"
+      minlength="14"
+      (onBlur)="buscarCNPJ(buscacnpj, form)"
+      name="cnpj"
+      placeholder="00.000.000/0001-00"
+      [unmask]="true"
+      [required]="true"
+      class="p-inputtext-lg w-full"
+    ></p-inputMask>
+  </div>
+
+  <div class="col-4 md:col-6 lg:col-3 mb-4">
+    <button
+      pButton
+      type="button"
+      label="Pesquisar"
+      icon="pi pi-search"
+      class="p-button-raised p-button-primary"
+      (click)="buscarCNPJ(buscacnpj, form)"
+      [disabled]="form.invalid"
+    ></button>
+  </div>
+
+  <div class="flex flex-wrap mt-5" *ngIf="buscar">
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="cnpj"
+          name="cnpj"
+          disabled="true"
+        />
+        <label htmlFor="cnpj">Cnpj</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="razaoSocial"
+          name="razaoSocial"
+          disabled="true"
+        />
+        <label htmlFor="razaoSocial">Razao Social</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="nomeFantasia"
+          name="nomeFantasia"
+          disabled="true"
+        />
+        <label htmlFor="nomeFantasia">Nome Fantasia</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="porte"
+          name="porte"
+          disabled="true"
+        />
+        <label htmlFor="porte">Porte</label>
+      </span>
+      <br />
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="uf"
+          name="uf"
+          disabled="true"
+        />
+        <label htmlFor="uf">UF</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="municipio"
+          name="municipio"
+          disabled="true"
+        />
+        <label htmlFor="municipio">Municipio</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="bairro"
+          name="bairro"
+          disabled="true"
+        />
+        <label htmlFor="bairro">Bairro</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="logradouro"
+          name="logradouro"
+          disabled="true"
+        />
+        <label htmlFor="logradouro">Logradouro</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="numero"
+          name="numero"
+          disabled="true"
+        />
+        <label htmlFor="numero">Numero</label>
+      </span>
+      <br />
+    </div>
+    <div class="col-12 md:col-6 lg:col-3 mb-3">
+      <span class="p-float-label">
+        <input
+          class="w-full"
+          pInputText
+          ngModel
+          id="cep"
+          name="cep"
+          disabled="true"
+        />
+        <label htmlFor="cep">CEP</label>
+      </span>
+      <br />
+    </div>
+  </div>
+</form>
